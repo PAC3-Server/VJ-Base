@@ -9,7 +9,7 @@ SWEP.Instructions				= "Controls are like a regular weapon."
 SWEP.Category					= "VJ Base"
 	-- Client Settings ---------------------------------------------------------------------------------------------------------------------------------------------
 if (CLIENT) then
-SWEP.Slot						= 4 -- Which weapon slot you want your SWEP to be in? (1 2 3 4 5 6) 
+SWEP.Slot						= 4 -- Which weapon slot you want your SWEP to be in? (1 2 3 4 5 6)
 SWEP.SlotPos					= 4 -- Which part of that slot do you want the SWEP to be in? (1 2 3 4 5 6)
 SWEP.UseHands					= true
 end
@@ -21,8 +21,8 @@ SWEP.NPC_ReloadSound			= {"vj_weapons/reload_rpg.wav"}
 SWEP.ViewModel					= "models/vj_weapons/v_rpg7.mdl" // "models/weapons/c_rpg.mdl"
 SWEP.WorldModel					= "models/vj_weapons/w_rpg7.mdl" // "models/weapons/w_rocket_launcher.mdl"
 SWEP.HoldType 					= "ar2"
-SWEP.Spawnable					= true
-SWEP.AdminSpawnable				= false
+--SWEP.Spawnable					= true
+SWEP.AdminSpawnable				= true
 	-- Primary Fire ---------------------------------------------------------------------------------------------------------------------------------------------
 SWEP.Primary.Damage				= 5 -- Damage
 SWEP.Primary.Force				= 5 -- Force applied on the object the bullet hits
@@ -61,7 +61,7 @@ if (CLIENT) then return end
 	SpawnBlaserRod:SetOwner(self.Owner)
 	SpawnBlaserRod:Activate()
 	SpawnBlaserRod:Spawn()
-	
+
 	local phy = SpawnBlaserRod:GetPhysicsObject()
 	if phy:IsValid() then
 		if self.Owner:IsPlayer() then
